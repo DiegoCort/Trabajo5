@@ -5,8 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class VentanaCilindro extends javax.swing.JFrame {
-
-
+    
     public VentanaCilindro() {
         initComponents();
         setTitle("CILINDRO");
@@ -40,7 +39,7 @@ public class VentanaCilindro extends javax.swing.JFrame {
 
         volumen.setText("Volumen (cm3):");
 
-        superficie.setText("Superficie (cm):");
+        superficie.setText("Superficie (cm3):");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,7 +100,7 @@ public class VentanaCilindro extends javax.swing.JFrame {
             altura = Double.parseDouble(txtAltura.getText());
             Cilindro cilindro = new Cilindro(radio, altura);
             volumen.setText("Volumen (cm3):" + String.format("%.2f", cilindro.calcularVolumen()));
-            superficie.setText("Superficie (cm):" + String.format("%.2f", cilindro.calcularSuperficie()));      
+            superficie.setText("Superficie (cm3):" + String.format("%.2f", cilindro.calcularSuperficie()));      
         }
         catch(Exception e){
             error = true;
@@ -113,7 +112,6 @@ public class VentanaCilindro extends javax.swing.JFrame {
         }
                 
     }//GEN-LAST:event_jButton1ActionPerformed
-
 
     public static void main(String args[]) {
 
