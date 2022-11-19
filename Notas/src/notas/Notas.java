@@ -17,10 +17,10 @@ public class Notas {
      */
     double cPromedio(){
         double suma = 0;
-        for(int i=0;i<ListaNotas.length;i++){
-            suma+=ListaNotas[i];
+        for(int i=0;i<5;i++){
+            suma = suma + ListaNotas[i];
         }
-        return(suma/ListaNotas.length);
+        return(suma/5);
     }
     
     /**Metodo para calcular la desviacion estandar 
