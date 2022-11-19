@@ -51,4 +51,21 @@ public class Notas {
         }
         return menor;
     }
+    
+    /**Metodo para calcular el valor mayor de las 
+    notas en el array mediante el return
+     */
+    double cMayor(){
+        double mayor = ListaNotas[0];//Se crea una variable como la nota mayor
+        for(int i = 0;i<ListaNotas.length;i++){
+            /**
+            se compara la variable con las notas de array
+            * y si alguna es mayor se actualiza
+             */
+            if(ListaNotas[i]>mayor){
+                mayor=ListaNotas[i];
+            }
+        }
+        return mayor;
+    }
 }
