@@ -106,7 +106,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="superficie">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Superficie (cm):"/>
+        <Property name="text" type="java.lang.String" value="Superficie (cm3):"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtRadio">
