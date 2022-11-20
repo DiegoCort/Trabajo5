@@ -38,8 +38,18 @@ public class frmPitagoras extends javax.swing.JInternalFrame {
         });
 
         btnCalcular.setText("CALCULAR");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
 
         btnBorrar.setText("BORRAR");
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
 
         btnSalir.setText("SALIR");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +117,21 @@ public class frmPitagoras extends javax.swing.JInternalFrame {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
        this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+
+        double catetoA, catetoB, hipotenusa;
+        catetoA = Double.parseDouble(txtLadoA.getText());
+        catetoB = Double.parseDouble(txtLadoB.getText());
+        hipotenusa = Pitagoras.calcularHipotenusa(catetoA, catetoB);
+        txtHipotenusa.setText(String.valueOf(hipotenusa));
+    }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        txtLadoA.setText("");
+        txtLadoB.setText("");
+        txtHipotenusa.setText("");
+    }//GEN-LAST:event_btnBorrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
