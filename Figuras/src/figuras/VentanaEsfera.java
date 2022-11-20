@@ -13,6 +13,7 @@ public class VentanaEsfera extends javax.swing.JFrame {
         setTitle("ESFERA");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
+        setLocationRelativeTo(null);
     }
 
 
@@ -86,8 +87,8 @@ public class VentanaEsfera extends javax.swing.JFrame {
         try{
             radio = Double.parseDouble(txtRadio.getText());
             Esfera esfera = new Esfera(radio);
-            volumen.setText("Volumen (cm3):" + String.format("%.2f", esfera.calcularVolumen()));
-            superficie.setText("Superficie (cm3):" + String.format("%.2f", esfera.calcularSuperficie()));      
+            volumen.setText("Volumen (cm3): " + String.format("%.2f", esfera.calcularVolumen()));
+            superficie.setText("Superficie (cm2): " + String.format("%.2f", esfera.calcularSuperficie()));      
         }
         catch(Exception e){
             error = true;
