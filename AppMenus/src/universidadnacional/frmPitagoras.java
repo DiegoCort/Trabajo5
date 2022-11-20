@@ -42,6 +42,11 @@ public class frmPitagoras extends javax.swing.JInternalFrame {
         btnBorrar.setText("BORRAR");
 
         btnSalir.setText("SALIR");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,8 +101,12 @@ public class frmPitagoras extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtHipotenusaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHipotenusaActionPerformed
-        // TODO add your handling code here:
+         
     }//GEN-LAST:event_txtHipotenusaActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+       this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
