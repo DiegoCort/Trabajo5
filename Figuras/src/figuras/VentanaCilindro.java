@@ -11,6 +11,7 @@ public class VentanaCilindro extends javax.swing.JFrame {
         setTitle("CILINDRO");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
+        setLocationRelativeTo(null);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -99,8 +100,8 @@ public class VentanaCilindro extends javax.swing.JFrame {
             radio = Double.parseDouble(txtRadio.getText());
             altura = Double.parseDouble(txtAltura.getText());
             Cilindro cilindro = new Cilindro(radio, altura);
-            volumen.setText("Volumen (cm3):" + String.format("%.2f", cilindro.calcularVolumen()));
-            superficie.setText("Superficie (cm3):" + String.format("%.2f", cilindro.calcularSuperficie()));      
+            volumen.setText("Volumen (cm3): " + String.format("%.2f", cilindro.calcularVolumen()));
+            superficie.setText("Superficie (cm3): " + String.format("%.2f", cilindro.calcularSuperficie()));      
         }
         catch(Exception e){
             error = true;
