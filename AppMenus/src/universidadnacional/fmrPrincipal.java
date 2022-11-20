@@ -72,9 +72,19 @@ public class fmrPrincipal extends javax.swing.JFrame {
         jMenu3.setText("Olm");
 
         jMenuItem3.setText("Calcular Voltaje");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem3);
 
         jMenuItem4.setText("Calcular Corriente");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         jMenuBar1.add(jMenu3);
@@ -82,6 +92,11 @@ public class fmrPrincipal extends javax.swing.JFrame {
         jMenu4.setText("Acerca");
 
         jMenuItem5.setText("Acerca de");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem5);
 
         jMenuBar1.add(jMenu4);
@@ -113,6 +128,28 @@ public class fmrPrincipal extends javax.swing.JFrame {
         pitagoras.setVisible(true);
         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        frmVoltaje voltaje = new frmVoltaje();
+        dp.add(voltaje);
+        voltaje.setClosable(true);
+        voltaje.setVisible(true);
+
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        frmCorriente corriente = new frmCorriente();
+        dp.add(corriente);
+        corriente.setClosable(true);
+        corriente.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        frmAcercade acercade = new frmAcercade();
+        dp.add(acercade);
+        acercade.setClosable(true);
+        acercade.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     public static void main(String args[]) {
 
