@@ -11,6 +11,7 @@ public class VentanaPiramide extends javax.swing.JFrame {
         setTitle("PIRAMIDE");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
+        setLocationRelativeTo(null);
     }
     
     @SuppressWarnings("unchecked")
@@ -112,8 +113,8 @@ public class VentanaPiramide extends javax.swing.JFrame {
             altura = Double.parseDouble(txtAltura.getText());
             apotema = Double.parseDouble(txtApotema.getText());
             piramide = new Piramide(base, altura, apotema);
-            volumen.setText("Volumen (cm3):" + String.format("%.2f", piramide.calcularVolumen()));
-            superficie.setText("Superficie (cm3):" + String.format("%.2f", piramide.calcularSuperficie()));      
+            volumen.setText("Volumen (cm3): " + String.format("%.2f", piramide.calcularVolumen()));
+            superficie.setText("Superficie (cm3): " + String.format("%.2f", piramide.calcularSuperficie()));      
         }
         catch(Exception e){
             error = true;
