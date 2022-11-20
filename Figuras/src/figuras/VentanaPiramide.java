@@ -12,6 +12,7 @@ public class VentanaPiramide extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
+        
     }
     
     @SuppressWarnings("unchecked")
