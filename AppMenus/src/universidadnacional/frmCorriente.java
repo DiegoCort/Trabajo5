@@ -117,7 +117,7 @@ public class frmCorriente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-
+        this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
 
