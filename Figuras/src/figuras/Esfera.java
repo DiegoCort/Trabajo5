@@ -6,6 +6,7 @@ public class Esfera extends FigurasGeometricas {
     private double radio;
     //constructor de la clase esfera
     public Esfera(double radio){
+        this.radio=radio;
         this.setVolumen(calcularVolumen());
         this.serSuperficie(calcularSuperficie());   
     }
