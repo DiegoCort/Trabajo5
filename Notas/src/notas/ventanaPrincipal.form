@@ -24,8 +24,8 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -39,22 +39,24 @@
                           <Component id="menor" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="txtNota4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtNota5" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtNota1" min="-2" pref="167" max="-2" attributes="0"/>
-                          <Component id="txtNota2" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtNota3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtNota3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtNota2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtNota1" alignment="0" pref="167" max="32767" attributes="0"/>
+                          <Component id="txtNota5" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="btncalcular" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="btnlimpiar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,6 +92,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btncalcular" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnlimpiar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="promedio" min="-2" max="-2" attributes="0"/>
@@ -175,6 +178,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="NOTA MENOR:"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSalir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SALIR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
