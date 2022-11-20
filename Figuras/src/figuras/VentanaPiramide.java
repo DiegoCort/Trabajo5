@@ -1,10 +1,16 @@
 
 package figuras;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class VentanaPiramide extends javax.swing.JFrame {
 
     public VentanaPiramide() {
         initComponents();
+        setTitle("PIRAMIDE");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
     }
     
     @SuppressWarnings("unchecked")
@@ -15,8 +21,8 @@ public class VentanaPiramide extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        volumen = new javax.swing.JLabel();
+        superficie = new javax.swing.JLabel();
         txtBase = new javax.swing.JTextField();
         txtAltura = new javax.swing.JTextField();
         txtApotema = new javax.swing.JTextField();
@@ -36,9 +42,9 @@ public class VentanaPiramide extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Volumen (cm3):");
+        volumen.setText("Volumen (cm3):");
 
-        jLabel5.setText("Superficie (cm3):");
+        superficie.setText("Superficie (cm3):");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,8 +58,8 @@ public class VentanaPiramide extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
+                                    .addComponent(volumen)
+                                    .addComponent(superficie))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,9 +93,9 @@ public class VentanaPiramide extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(12, 12, 12)
-                .addComponent(jLabel4)
+                .addComponent(volumen)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
+                .addComponent(superficie)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -97,8 +103,26 @@ public class VentanaPiramide extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-
+        
+        Piramide piramide;
+        boolean error = false;
+        double base=0, altura=0, apotema=0;
+        try{
+            base = Double.parseDouble(txtBase.getText());
+            altura = Double.parseDouble(txtAltura.getText());
+            apotema = Double.parseDouble(txtApotema.getText());
+            piramide = new Piramide(base, altura, apotema);
+            volumen.setText("Volumen (cm3):" + String.format("%.2f", piramide.calcularVolumen()));
+            superficie.setText("Superficie (cm3):" + String.format("%.2f", piramide.calcularSuperficie()));      
+        }
+        catch(Exception e){
+            error = true;
+        }
+        finally{
+            if(error){
+                JOptionPane.showMessageDialog(null, "Campo nulo o error en el formato numerico", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -116,10 +140,10 @@ public class VentanaPiramide extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel superficie;
     private javax.swing.JTextField txtAltura;
     private javax.swing.JTextField txtApotema;
     private javax.swing.JTextField txtBase;
+    private javax.swing.JLabel volumen;
     // End of variables declaration//GEN-END:variables
 }
