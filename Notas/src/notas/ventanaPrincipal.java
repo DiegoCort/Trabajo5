@@ -35,6 +35,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         dEstandar = new javax.swing.JLabel();
         mayor = new javax.swing.JLabel();
         menor = new javax.swing.JLabel();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,12 +71,19 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
         menor.setText("NOTA MENOR:");
 
+        btnSalir.setText("SALIR");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,18 +97,20 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                             .addComponent(mayor)
                             .addComponent(menor))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtNota4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNota5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNota1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNota2)
-                            .addComponent(txtNota3)))
+                            .addComponent(txtNota3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNota2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNota1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                            .addComponent(txtNota5)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
+                        .addGap(35, 35, 35)
                         .addComponent(btncalcular)
-                        .addGap(27, 27, 27)
-                        .addComponent(btnlimpiar)))
-                .addContainerGap())
+                        .addGap(26, 26, 26)
+                        .addComponent(btnlimpiar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(btnSalir)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +138,8 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btncalcular)
-                    .addComponent(btnlimpiar))
+                    .addComponent(btnlimpiar)
+                    .addComponent(btnSalir))
                 .addGap(18, 18, 18)
                 .addComponent(promedio)
                 .addGap(18, 18, 18)
@@ -188,6 +199,11 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btncalcularActionPerformed
 
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalirActionPerformed
+
 
     public static void main(String args[]) {
 
@@ -199,6 +215,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSalir;
     private javax.swing.JButton btncalcular;
     private javax.swing.JButton btnlimpiar;
     private javax.swing.JLabel dEstandar;
