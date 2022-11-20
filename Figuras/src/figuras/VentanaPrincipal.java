@@ -48,7 +48,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnVolver.setText("VOLVER");
+        btnVolver.setText("SALIR");
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);
