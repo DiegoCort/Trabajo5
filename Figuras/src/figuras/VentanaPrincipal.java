@@ -23,6 +23,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCilindro = new javax.swing.JButton();
         btnEsfera = new javax.swing.JButton();
         btnPiramide = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,15 +48,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnVolver.setText("VOLVER");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(btnCilindro)
-                .addGap(18, 18, 18)
-                .addComponent(btnEsfera)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnVolver)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnCilindro)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEsfera)))
                 .addGap(18, 18, 18)
                 .addComponent(btnPiramide)
                 .addContainerGap(15, Short.MAX_VALUE))
@@ -68,7 +79,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(btnCilindro)
                     .addComponent(btnEsfera)
                     .addComponent(btnPiramide))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(btnVolver)
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -92,6 +105,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         ventanaPiramide.setVisible(true);
     }//GEN-LAST:event_btnPiramideActionPerformed
 
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -105,5 +123,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCilindro;
     private javax.swing.JButton btnEsfera;
     private javax.swing.JButton btnPiramide;
+    private javax.swing.JButton btnVolver;
     // End of variables declaration//GEN-END:variables
 }
